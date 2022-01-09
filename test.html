@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #forma {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            background-color: rgb(50, 184, 121);
+            margin: 0;
+            padding: 10px;
+            color: rgb(255, 255, 255);
+        }
+        #forma input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="forma">
+        <label>Username</label>
+        <input type="text" id="user">
+        <label>Email</label>
+        <input type="email" id="email">
+        <label>Password</label>
+        <input type="password" name="" id="pass">
+        <label> I agree the roles of <a href="#">Blah blah blah </a></label>
+        <button onclick="work()">Sign in</button>
+    </div>
+    <p id="showPass">454</p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        class profile {
+            constructor(username, email, password)
+            {
+                this.User = username;
+                this.Email = email;
+                this.Pass = password;
+            }
+        }
+        var user = document.getElementById("user");
+        var email = document.getElementById("email");
+        var pass = document.getElementById("pass");
+        var resualt = document.getElementById("showPass");
+        var complete = true;
+
+
+        function addList(){
+            resualt.innerHTML = `The username is ${user.value}, the email is ${email.value}, and the password is ${pass.value}.`;        
+        }
+
+    function work() {
+        //Username
+        if(user.value == ""){
+            complete = false;
+        }
+        else{
+            complete = true;
+            if (complete){
+            addList()
+        }
+        }
+        //Email
+        if(email.value == ""){
+            complete = false;
+        }
+        else{
+            complete = true;
+            if (complete){
+            addList()
+            }
+        }
+        //password
+        if(pass.value == ""){
+            complete = false;
+
+        }
+        else {
+            complete = true;
+            if (complete){
+            addList()
+            }
+        }
+
+        // resualt.innerHTML = "Password not typed yet.";
+        // resualt.style.color="red";
+    }
+
+
+</script>
+</body>
+</html>
